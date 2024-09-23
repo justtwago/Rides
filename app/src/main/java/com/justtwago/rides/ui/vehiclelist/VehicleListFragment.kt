@@ -8,7 +8,9 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.justtwago.rides.R
 import com.justtwago.rides.databinding.FragmentVehicleListBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class VehicleListFragment : Fragment() {
     private var _binding: FragmentVehicleListBinding? = null
     private val binding get() = _binding!!
