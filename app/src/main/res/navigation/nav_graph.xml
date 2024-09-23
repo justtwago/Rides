@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/vehicleListFragment">
+
+    <fragment
+        android:id="@+id/vehicleListFragment"
+        android:name="com.justtwago.rides.ui.vehiclelist.VehicleListFragment"
+        android:label="Vehicle List">
+        <action
+            android:id="@+id/action_vehicleListFragment_to_vehicleDetailsFragment"
+            app:destination="@id/vehicleDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/vehicleDetailsFragment"
+        android:name="com.justtwago.rides.ui.vehicledetails.VehicleDetailsFragment"
+        android:label="Vehicle Details" />
+
+</navigation>

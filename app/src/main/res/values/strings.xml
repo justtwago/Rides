@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Rides</string>
+    <string name="sample_button">Sample Button</string>
+    <string name="sample_details">Sample details</string>
 </resources>
