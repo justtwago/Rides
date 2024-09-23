@@ -1,4 +1,4 @@
-package com.justtwago.rides.domain
+package com.justtwago.rides.domain.model
 
 data class Vehicle(
     val vin: String,

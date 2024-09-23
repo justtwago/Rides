@@ -40,5 +40,11 @@ dependencies {
     implementation(libs.dagger.hilt.android)
     ksp(libs.dagger.hilt.compiler)
 
+    implementation(libs.square.retrofit)
+    implementation(libs.square.retrofit.moshi.converter)
+    implementation(libs.square.moshi)
+    implementation(libs.square.moshi.adapters)
+    ksp(libs.square.moshi.codegen)
+
     testImplementation(libs.junit)
 }
