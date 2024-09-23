@@ -47,4 +47,5 @@ dependencies {
     ksp(libs.square.moshi.codegen)
 
     testImplementation(libs.junit)
+    testImplementation(libs.mockk)
 }
