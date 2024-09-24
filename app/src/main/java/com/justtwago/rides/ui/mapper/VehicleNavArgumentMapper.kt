@@ -1,4 +1,4 @@
-package com.justtwago.rides.ui.vehiclelist.mapper
+package com.justtwago.rides.ui.mapper
 
 import com.justtwago.rides.domain.model.Vehicle
 import com.justtwago.rides.ui.model.VehicleNavArgument
@@ -11,5 +11,12 @@ class VehicleNavArgumentMapper @Inject constructor() {
         makeAndModel = vehicle.makeAndModel,
         color = vehicle.color,
         carType = vehicle.carType
+    )
+
+    fun mapToVehicleDomain(vehicleNavArgument: VehicleNavArgument): Vehicle = Vehicle(
+        vin = vehicleNavArgument.vin,
+        makeAndModel = vehicleNavArgument.makeAndModel,
+        color = vehicleNavArgument.color,
+        carType = vehicleNavArgument.carType
     )
 }

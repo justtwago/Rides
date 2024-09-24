@@ -4,7 +4,7 @@ import app.cash.turbine.test
 import com.justtwago.rides.domain.model.Vehicle
 import com.justtwago.rides.domain.repository.VehiclesRepository
 import com.justtwago.rides.ui.model.VehicleNavArgument
-import com.justtwago.rides.ui.vehiclelist.mapper.VehicleNavArgumentMapper
+import com.justtwago.rides.ui.mapper.VehicleNavArgumentMapper
 import com.justtwago.rides.ui.vehiclelist.model.VehicleListUiEvent
 import com.justtwago.rides.ui.vehiclelist.model.VehicleListUiState
 import com.justtwago.rides.ui.vehiclelist.model.VehicleSorting.CAR_TYPE

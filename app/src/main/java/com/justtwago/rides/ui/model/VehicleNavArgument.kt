@@ -9,4 +9,13 @@ data class VehicleNavArgument(
     val makeAndModel: String,
     val color: String,
     val carType: String
-) : Parcelable
+) : Parcelable {
+    companion object {
+        val Default = VehicleNavArgument(
+            vin = "",
+            makeAndModel = "",
+            color = "",
+            carType = ""
+        )
+    }
+}

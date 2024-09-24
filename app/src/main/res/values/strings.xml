@@ -7,5 +7,6 @@
     <string name="vin">VIN</string>
     <string name="car_type">Car Type</string>
     <string name="vin_template">VIN: %s</string>
+    <string name="color_template">Color: %s</string>
     <string name="sorted_by">Sorted by:</string>
 </resources>
