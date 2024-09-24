@@ -10,17 +10,17 @@
         android:label="Vehicle List">
         <action
             android:id="@+id/action_vehicleListFragment_to_vehicleDetailsFragment"
-            app:destination="@id/vehicleDetailsFragment">
-            <argument
-                android:name="vehicle"
-                app:argType="com.justtwago.rides.ui.model.VehicleNavArgument"
-                app:nullable="false" />
-        </action>
+            app:destination="@id/vehicleDetailsFragment" />
     </fragment>
 
     <fragment
         android:id="@+id/vehicleDetailsFragment"
         android:name="com.justtwago.rides.ui.vehicledetails.VehicleDetailsFragment"
-        android:label="Vehicle Details" />
+        android:label="Vehicle Details">
+        <argument
+            android:name="vehicle"
+            app:argType="com.justtwago.rides.ui.model.VehicleNavArgument"
+            app:nullable="false" />
+    </fragment>
 
 </navigation>

@@ -80,7 +80,7 @@ class VehicleListFragment : Fragment() {
     }
 
     private fun observeUiState() {
-        lifecycleScope.launch {
+        viewLifecycleOwner.lifecycleScope.launch {
             viewModel.uiState.collect { uiState ->
                 updateSortingState(sorting = uiState.sorting)
                 updateVehiclesState(state = uiState.vehicles)
@@ -126,7 +126,7 @@ class VehicleListFragment : Fragment() {
     }
 
     private fun observeUiEvents() {
-        lifecycleScope.launch {
+        viewLifecycleOwner.lifecycleScope.launch {
             viewModel.uiEvents.collect { event ->
                 when (event) {
                     is VehicleListUiEvent.NavigateToVehicleDetails -> {
