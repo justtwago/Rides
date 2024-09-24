@@ -4,6 +4,7 @@ plugins {
     alias(libs.plugins.navigation.safeargs)
     alias(libs.plugins.google.ksp)
     alias(libs.plugins.dagger.hilt)
+    alias(libs.plugins.parcelize)
 }
 
 android {
@@ -60,5 +61,7 @@ dependencies {
     ksp(libs.dagger.hilt.compiler)
 
     testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
+    testImplementation(libs.mockk)
+    testImplementation(libs.kotlinx.coroutines.test)
+    testImplementation(libs.turbine)
 }

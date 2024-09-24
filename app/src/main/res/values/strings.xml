@@ -2,4 +2,10 @@
     <string name="app_name">Rides</string>
     <string name="sample_button">Sample Button</string>
     <string name="sample_details">Sample details</string>
+    <string name="enter_number_of_vehicles">Enter number of vehicles</string>
+    <string name="search">Search</string>
+    <string name="vin">VIN</string>
+    <string name="car_type">Car Type</string>
+    <string name="vin_template">VIN: %s</string>
+    <string name="sorted_by">Sorted by:</string>
 </resources>

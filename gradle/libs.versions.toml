@@ -3,7 +3,6 @@ agp = "8.5.2"
 kotlin = "2.0.10"
 coreKtx = "1.13.1"
 junit = "4.13.2"
-junitVersion = "1.2.1"
 appcompat = "1.7.0"
 material = "1.12.0"
 activity = "1.9.2"
@@ -15,11 +14,12 @@ ksp = "2.0.10-1.0.24"
 retrofit = "2.11.0"
 moshi = "1.15.1"
 mockk = "1.13.12"
+coroutines = "1.9.0-RC"
+turbine = "1.1.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
-androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
@@ -36,6 +36,8 @@ square-moshi = { group = "com.squareup.moshi", name = "moshi", version.ref = "mo
 square-moshi-adapters = { group = "com.squareup.moshi", name = "moshi-adapters", version.ref = "moshi" }
 square-moshi-codegen = { group = "com.squareup.moshi", name = "moshi-kotlin-codegen", version.ref = "moshi" }
 mockk = { group = "io.mockk", name = "mockk", version.ref = "mockk" }
+kotlinx-coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "coroutines" }
+turbine = { group = "app.cash.turbine", name = "turbine", version.ref = "turbine" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
@@ -45,3 +47,4 @@ navigation-safeargs = { id = "androidx.navigation.safeargs.kotlin", version.ref 
 android-library = { id = "com.android.library", version.ref = "agp" }
 dagger-hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
 google-ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+parcelize = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "kotlin" }
