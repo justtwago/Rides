@@ -13,4 +13,8 @@
     <string name="search_error_not_a_number">Please enter a valid number</string>
     <string name="search_error_less_than_one">Value must be at least 1</string>
     <string name="search_error_greater_than_hundred">Value must not exceed 100</string>
+    <string name="basic">Basic</string>
+    <string name="carbon_emissions">Carbon Emissions</string>
+    <string name="kilometrage_template">Kilometrage: %s km</string>
+    <string name="carbon_emissions_template">Carbon Emissions: %s units</string>
 </resources>

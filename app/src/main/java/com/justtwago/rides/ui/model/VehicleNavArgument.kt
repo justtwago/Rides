@@ -10,14 +10,4 @@ data class VehicleNavArgument(
     val color: String,
     val carType: String,
     val kilometrage: Int
-) : Parcelable {
-    companion object {
-        val Default = VehicleNavArgument(
-            vin = "",
-            makeAndModel = "",
-            color = "",
-            carType = "",
-            kilometrage = 0
-        )
-    }
-}
+) : Parcelable
