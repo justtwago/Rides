@@ -10,6 +10,7 @@ internal class VehicleResponseMapper @Inject constructor() {
         vin = vehicleResponse.vin,
         makeAndModel = vehicleResponse.makeAndModel,
         color = vehicleResponse.color,
-        carType = vehicleResponse.carType
+        carType = vehicleResponse.carType,
+        kilometrage = vehicleResponse.kilometrage
     )
 }

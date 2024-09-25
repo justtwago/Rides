@@ -16,7 +16,8 @@ internal class VehicleNavArgumentMapperTest {
             vin = "123",
             makeAndModel = "Toyota Camry",
             color = "Red",
-            carType = "Sedan"
+            carType = "Sedan",
+            kilometrage = 45678
         )
 
         // WHEN
@@ -28,7 +29,8 @@ internal class VehicleNavArgumentMapperTest {
                 vin = "123",
                 makeAndModel = "Toyota Camry",
                 color = "Red",
-                carType = "Sedan"
+                carType = "Sedan",
+                kilometrage = 45678
             ),
             navArgument
         )
@@ -41,7 +43,8 @@ internal class VehicleNavArgumentMapperTest {
             vin = "123",
             makeAndModel = "Toyota Camry",
             color = "Red",
-            carType = "Sedan"
+            carType = "Sedan",
+            kilometrage = 45678
         )
 
         // WHEN
@@ -53,7 +56,8 @@ internal class VehicleNavArgumentMapperTest {
                 vin = "123",
                 makeAndModel = "Toyota Camry",
                 color = "Red",
-                carType = "Sedan"
+                carType = "Sedan",
+                kilometrage = 45678
             ),
             vehicle
         )

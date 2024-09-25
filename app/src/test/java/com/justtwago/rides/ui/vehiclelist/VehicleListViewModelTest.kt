@@ -223,13 +223,15 @@ internal class VehicleListViewModelTest {
                 vin = "123",
                 makeAndModel = "Toyota Camry",
                 color = "Red",
-                carType = "Sedan"
+                carType = "Sedan",
+                kilometrage = 45678
             )
             val vehicleNavArgument = VehicleNavArgument(
                 vin = "123",
                 makeAndModel = "Toyota Camry",
                 color = "Red",
-                carType = "Sedan"
+                carType = "Sedan",
+                kilometrage = 45678
             )
 
             every {
@@ -302,12 +304,14 @@ private val vehicles = listOf(
         vin = "123",
         makeAndModel = "Toyota Camry",
         color = "Red",
-        carType = "Sedan"
+        carType = "Sedan",
+        kilometrage = 45678
     ),
     Vehicle(
         vin = "456",
         makeAndModel = "Honda Civic",
         color = "Blue",
-        carType = "Hatchback"
+        carType = "Hatchback",
+        kilometrage = 45678
     )
 )

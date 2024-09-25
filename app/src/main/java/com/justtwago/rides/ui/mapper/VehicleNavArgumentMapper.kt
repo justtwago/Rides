@@ -10,13 +10,15 @@ class VehicleNavArgumentMapper @Inject constructor() {
         vin = vehicle.vin,
         makeAndModel = vehicle.makeAndModel,
         color = vehicle.color,
-        carType = vehicle.carType
+        carType = vehicle.carType,
+        kilometrage = vehicle.kilometrage
     )
 
     fun mapToVehicleDomain(vehicleNavArgument: VehicleNavArgument): Vehicle = Vehicle(
         vin = vehicleNavArgument.vin,
         makeAndModel = vehicleNavArgument.makeAndModel,
         color = vehicleNavArgument.color,
-        carType = vehicleNavArgument.carType
+        carType = vehicleNavArgument.carType,
+        kilometrage = vehicleNavArgument.kilometrage
     )
 }

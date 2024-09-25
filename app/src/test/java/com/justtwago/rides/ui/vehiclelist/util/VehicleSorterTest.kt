@@ -21,19 +21,22 @@ class VehicleSorterTest {
             vin = "123",
             makeAndModel = "Toyota Camry",
             color = "Red",
-            carType = "Sedan"
+            carType = "Sedan",
+            kilometrage = 45678
         )
         val vehicle2 = Vehicle(
             vin = "456",
             makeAndModel = "Honda Civic",
             color = "Blue",
-            carType = "Hatchback"
+            carType = "Hatchback",
+            kilometrage = 45678
         )
         val vehicle3 = Vehicle(
             vin = "789",
             makeAndModel = "Ford Mustang",
             color = "Black",
-            carType = "Coupe"
+            carType = "Coupe",
+            kilometrage = 45678
         )
         val vehicles = listOf(vehicle2, vehicle1, vehicle3)
 
@@ -51,19 +54,22 @@ class VehicleSorterTest {
             vin = "123",
             makeAndModel = "Toyota Camry",
             color = "Red",
-            carType = "Sedan"
+            carType = "Sedan",
+            kilometrage = 45678
         )
         val vehicle2 = Vehicle(
             vin = "456",
             makeAndModel = "Honda Civic",
             color = "Blue",
-            carType = "Hatchback"
+            carType = "Hatchback",
+            kilometrage = 45678
         )
         val vehicle3 = Vehicle(
             vin = "789",
             makeAndModel = "Ford Mustang",
             color = "Black",
-            carType = "Coupe"
+            carType = "Coupe",
+            kilometrage = 45678
         )
         val vehicles = listOf(vehicle1, vehicle3, vehicle2)
 

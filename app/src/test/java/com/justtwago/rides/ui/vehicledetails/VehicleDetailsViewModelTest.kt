@@ -45,14 +45,16 @@ class VehicleDetailsViewModelTest {
                 vin = "123",
                 makeAndModel = "Toyota Camry",
                 color = "Red",
-                carType = "Sedan"
+                carType = "Sedan",
+                kilometrage = 45678
             )
 
             val vehicle = Vehicle(
                 vin = "123",
                 makeAndModel = "Toyota Camry",
                 color = "Red",
-                carType = "Sedan"
+                carType = "Sedan",
+                kilometrage = 45678
             )
 
             val savedStateHandle = SavedStateHandle()

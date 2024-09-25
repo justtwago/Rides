@@ -8,5 +8,6 @@ internal data class VehicleResponse(
     @Json(name = "vin") val vin: String,
     @Json(name = "make_and_model") val makeAndModel: String,
     @Json(name = "color") val color: String,
-    @Json(name = "car_type") val carType: String
+    @Json(name = "car_type") val carType: String,
+    @Json(name = "kilometrage") val kilometrage: Int
 )

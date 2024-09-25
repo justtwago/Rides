@@ -21,14 +21,16 @@ internal class VehicleResponseMapperTest {
             vin = "1HGCM82633A004352",
             makeAndModel = "Honda Civic",
             color = "Blue",
-            carType = "Sedan"
+            carType = "Sedan",
+            kilometrage = 45678
         )
 
         val expected = Vehicle(
             vin = "1HGCM82633A004352",
             makeAndModel = "Honda Civic",
             color = "Blue",
-            carType = "Sedan"
+            carType = "Sedan",
+            kilometrage = 45678
         )
 
         // WHEN

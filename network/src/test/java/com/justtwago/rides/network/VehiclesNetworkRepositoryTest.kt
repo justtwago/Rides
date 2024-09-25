@@ -29,8 +29,20 @@ internal class VehiclesNetworkRepositoryTest {
             // GIVEN
             val size = 2
             val vehicleResponses = listOf(
-                VehicleResponse("VIN1", "Model1", "Red", "Sedan"),
-                VehicleResponse("VIN2", "Model2", "Blue", "SUV")
+                VehicleResponse(
+                    vin = "VIN1",
+                    makeAndModel = "Model1",
+                    color = "Red",
+                    carType = "Sedan",
+                    kilometrage = 45678
+                ),
+                VehicleResponse(
+                    vin = "VIN2",
+                    makeAndModel = "Model2",
+                    color = "Blue",
+                    carType = "SUV",
+                    kilometrage = 45678
+                )
             )
             coEvery { service.getVehicles(size) } returns vehicleResponses
 
@@ -40,8 +52,20 @@ internal class VehiclesNetworkRepositoryTest {
             // THEN
             assertEquals(
                 listOf(
-                    Vehicle("VIN1", "Model1", "Red", "Sedan"),
-                    Vehicle("VIN2", "Model2", "Blue", "SUV")
+                    Vehicle(
+                        vin = "VIN1",
+                        makeAndModel = "Model1",
+                        color = "Red",
+                        carType = "Sedan",
+                        kilometrage = 45678
+                    ),
+                    Vehicle(
+                        vin = "VIN2",
+                        makeAndModel = "Model2",
+                        color = "Blue",
+                        carType = "SUV",
+                        kilometrage = 45678
+                    )
                 ),
                 result
             )
