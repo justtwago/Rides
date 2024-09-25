@@ -4,7 +4,8 @@ import com.justtwago.rides.domain.model.Vehicle
 
 data class VehicleListUiState(
     val vehicles: VehiclesState,
-    val sorting: VehicleSorting
+    val sorting: VehicleSorting,
+    val searchValidationError: SearchValidationError? = null
 ) {
     companion object {
         val Initial = VehicleListUiState(VehiclesState.Content(emptyList()), VehicleSorting.VIN)
@@ -19,4 +20,11 @@ sealed interface VehiclesState {
             val Empty = Content(emptyList())
         }
     }
+}
+
+sealed interface SearchValidationError {
+    data object Empty : SearchValidationError
+    data object NotANumber : SearchValidationError
+    data object LessThanOne : SearchValidationError
+    data object GreaterThanHundred : SearchValidationError
 }

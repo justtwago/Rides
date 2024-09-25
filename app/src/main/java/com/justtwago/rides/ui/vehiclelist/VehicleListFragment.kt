@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.isGone
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
@@ -13,6 +14,7 @@ import com.justtwago.rides.R
 import com.justtwago.rides.databinding.FragmentVehicleListBinding
 import com.justtwago.rides.ui.model.VehicleNavArgument
 import com.justtwago.rides.ui.vehiclelist.adapter.VehiclesAdapter
+import com.justtwago.rides.ui.vehiclelist.model.SearchValidationError
 import com.justtwago.rides.ui.vehiclelist.model.VehicleListUiEvent
 import com.justtwago.rides.ui.vehiclelist.model.VehicleSorting
 import com.justtwago.rides.ui.vehiclelist.model.VehiclesState
@@ -65,17 +67,10 @@ class VehicleListFragment : Fragment() {
     private fun setupSearchBar() {
         val searchInput = binding.searchInput.searchEditText
         binding.searchInput.searchButton.setOnClickListener {
-            val searchQuery = searchInput.text
-            if (searchQuery.isNotBlank()) {
-                viewModel.onSearchVehiclesClicked(
-                    vehicleCount = searchQuery.toString().toInt()
-                )
-            }
+            viewModel.onSearchVehiclesClicked(query = searchInput.text.toString())
         }
         binding.searchInput.searchEditText.onSearchClicked { searchQuery ->
-            if (searchQuery.isNotBlank()) {
-                viewModel.onSearchVehiclesClicked(vehicleCount = searchQuery.toInt())
-            }
+            viewModel.onSearchVehiclesClicked(query = searchQuery)
         }
     }
 
@@ -84,6 +79,7 @@ class VehicleListFragment : Fragment() {
             viewModel.uiState.collect { uiState ->
                 updateSortingState(sorting = uiState.sorting)
                 updateVehiclesState(state = uiState.vehicles)
+                updateSearchInputErrorState(error = uiState.searchValidationError)
             }
         }
     }
@@ -103,26 +99,39 @@ class VehicleListFragment : Fragment() {
                 vehiclesAdapter.submitList(state.vehicles) {
                     binding.vehicleList.scrollToPosition(0)
                 }
-                setSearchInputState(searching = false)
+                setSearchInputLoadingState(loading = false)
                 setSortingState(searching = false)
             }
 
             is VehiclesState.Loading -> {
-                setSearchInputState(searching = true)
+                setSearchInputLoadingState(loading = true)
                 setSortingState(searching = true)
             }
         }
     }
 
-    private fun setSearchInputState(searching: Boolean) {
-        binding.searchInput.searchEditText.isEnabled = !searching
-        binding.searchInput.progressBar.isVisible = searching
-        binding.searchInput.searchButton.isVisible = !searching
+    private fun setSearchInputLoadingState(loading: Boolean) {
+        binding.searchInput.searchEditText.isEnabled = !loading
+        binding.searchInput.progressBar.isVisible = loading
+        binding.searchInput.searchButton.isVisible = !loading
     }
 
     private fun setSortingState(searching: Boolean) {
         binding.vinChip.isEnabled = !searching
         binding.carTypeChip.isEnabled = !searching
+    }
+
+    private fun updateSearchInputErrorState(error: SearchValidationError?) {
+        binding.searchInput.searchErrorMessage.isGone = error == null
+        binding.searchInput.searchErrorMessage.text = when (error) {
+            null -> ""
+            SearchValidationError.Empty -> getString(R.string.search_error_empty)
+            SearchValidationError.NotANumber -> getString(R.string.search_error_not_a_number)
+            SearchValidationError.LessThanOne -> getString(R.string.search_error_less_than_one)
+            SearchValidationError.GreaterThanHundred -> {
+                getString(R.string.search_error_greater_than_hundred)
+            }
+        }
     }
 
     private fun observeUiEvents() {

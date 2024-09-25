@@ -9,4 +9,8 @@
     <string name="vin_template">VIN: %s</string>
     <string name="color_template">Color: %s</string>
     <string name="sorted_by">Sorted by:</string>
+    <string name="search_error_empty">Value cannot be empty</string>
+    <string name="search_error_not_a_number">Please enter a valid number</string>
+    <string name="search_error_less_than_one">Value must be at least 1</string>
+    <string name="search_error_greater_than_hundred">Value must not exceed 100</string>
 </resources>
