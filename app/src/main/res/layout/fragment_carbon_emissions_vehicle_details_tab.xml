@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/kilometrage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Kilometrage: 12580 km" />
+
+    <TextView
+        android:id="@+id/carbon_emissions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        tools:text="Carbon Emissions: 18049 units" />
+
+</LinearLayout>

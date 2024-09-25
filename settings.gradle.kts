@@ -21,4 +21,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "Rides"
 include(":app")
- 
+include(":network")
+include(":domain")
